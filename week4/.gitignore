@@ -1,0 +1,9 @@
+# Week 4 local virtual environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.log

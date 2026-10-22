@@ -1,0 +1,38 @@
+[
+    {
+        "Model": "Linear Regression",
+        "CV_MAE": 3.5227,
+        "CV_RMSE": 4.607,
+        "CV_R2": -0.0924,
+        "Train_MAE": 2.9462,
+        "Train_RMSE": 3.8651,
+        "Train_R2": 0.2888,
+        "Test_MAE": 3.3953,
+        "Test_RMSE": 4.1957,
+        "Test_R2": 0.1415
+    },
+    {
+        "Model": "Ridge Regression",
+        "CV_MAE": 3.5057,
+        "CV_RMSE": 4.5839,
+        "CV_R2": -0.0801,
+        "Train_MAE": 2.9461,
+        "Train_RMSE": 3.8652,
+        "Train_R2": 0.2887,
+        "Test_MAE": 3.3929,
+        "Test_RMSE": 4.1934,
+        "Test_R2": 0.1424
+    },
+    {
+        "Model": "Random Forest",
+        "CV_MAE": 2.9343,
+        "CV_RMSE": 3.9419,
+        "CV_R2": 0.2036,
+        "Train_MAE": 1.3372,
+        "Train_RMSE": 1.8457,
+        "Train_R2": 0.8378,
+        "Test_MAE": 3.0364,
+        "Test_RMSE": 3.8126,
+        "Test_R2": 0.2911
+    }
+]

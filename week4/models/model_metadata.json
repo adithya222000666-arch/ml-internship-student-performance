@@ -1,0 +1,392 @@
+{
+    "model_name": "Random Forest",
+    "artifact_file": "student_performance_pipeline.joblib",
+    "target": "G3",
+    "target_range": [
+        0,
+        20
+    ],
+    "total_training_samples": 316,
+    "total_test_samples": 79,
+    "feature_count": 30,
+    "feature_names": [
+        "school",
+        "sex",
+        "age",
+        "address",
+        "famsize",
+        "Pstatus",
+        "Medu",
+        "Fedu",
+        "Mjob",
+        "Fjob",
+        "reason",
+        "guardian",
+        "traveltime",
+        "studytime",
+        "failures",
+        "schoolsup",
+        "famsup",
+        "paid",
+        "activities",
+        "nursery",
+        "higher",
+        "internet",
+        "romantic",
+        "famrel",
+        "freetime",
+        "goout",
+        "Dalc",
+        "Walc",
+        "health",
+        "absences"
+    ],
+    "numerical_features": [
+        "age",
+        "Medu",
+        "Fedu",
+        "traveltime",
+        "studytime",
+        "failures",
+        "famrel",
+        "freetime",
+        "goout",
+        "Dalc",
+        "Walc",
+        "health",
+        "absences"
+    ],
+    "categorical_features": [
+        "school",
+        "sex",
+        "address",
+        "famsize",
+        "Pstatus",
+        "Mjob",
+        "Fjob",
+        "reason",
+        "guardian",
+        "schoolsup",
+        "famsup",
+        "paid",
+        "activities",
+        "nursery",
+        "higher",
+        "internet",
+        "romantic"
+    ],
+    "feature_schema": {
+        "age": {
+            "type": "numeric",
+            "min": 15.0,
+            "max": 22.0,
+            "mean": 16.696202531645568,
+            "median": 17.0,
+            "default": 17.0
+        },
+        "Medu": {
+            "type": "numeric",
+            "min": 0.0,
+            "max": 4.0,
+            "mean": 2.749367088607595,
+            "median": 3.0,
+            "default": 3.0
+        },
+        "Fedu": {
+            "type": "numeric",
+            "min": 0.0,
+            "max": 4.0,
+            "mean": 2.5215189873417723,
+            "median": 2.0,
+            "default": 2.0
+        },
+        "traveltime": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 4.0,
+            "mean": 1.4481012658227848,
+            "median": 1.0,
+            "default": 1.0
+        },
+        "studytime": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 4.0,
+            "mean": 2.0354430379746837,
+            "median": 2.0,
+            "default": 2.0
+        },
+        "failures": {
+            "type": "numeric",
+            "min": 0.0,
+            "max": 3.0,
+            "mean": 0.3341772151898734,
+            "median": 0.0,
+            "default": 0.0
+        },
+        "famrel": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 3.9443037974683546,
+            "median": 4.0,
+            "default": 4.0
+        },
+        "freetime": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 3.2354430379746835,
+            "median": 3.0,
+            "default": 3.0
+        },
+        "goout": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 3.108860759493671,
+            "median": 3.0,
+            "default": 3.0
+        },
+        "Dalc": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 1.481012658227848,
+            "median": 1.0,
+            "default": 1.0
+        },
+        "Walc": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 2.2911392405063293,
+            "median": 2.0,
+            "default": 2.0
+        },
+        "health": {
+            "type": "numeric",
+            "min": 1.0,
+            "max": 5.0,
+            "mean": 3.5544303797468353,
+            "median": 4.0,
+            "default": 4.0
+        },
+        "absences": {
+            "type": "numeric",
+            "min": 0.0,
+            "max": 75.0,
+            "mean": 5.708860759493671,
+            "median": 4.0,
+            "default": 4.0
+        },
+        "school": {
+            "type": "categorical",
+            "allowed_values": [
+                "GP",
+                "MS"
+            ],
+            "mode": "GP",
+            "default": "GP"
+        },
+        "sex": {
+            "type": "categorical",
+            "allowed_values": [
+                "F",
+                "M"
+            ],
+            "mode": "F",
+            "default": "F"
+        },
+        "address": {
+            "type": "categorical",
+            "allowed_values": [
+                "R",
+                "U"
+            ],
+            "mode": "U",
+            "default": "U"
+        },
+        "famsize": {
+            "type": "categorical",
+            "allowed_values": [
+                "GT3",
+                "LE3"
+            ],
+            "mode": "GT3",
+            "default": "GT3"
+        },
+        "Pstatus": {
+            "type": "categorical",
+            "allowed_values": [
+                "A",
+                "T"
+            ],
+            "mode": "T",
+            "default": "T"
+        },
+        "Mjob": {
+            "type": "categorical",
+            "allowed_values": [
+                "at_home",
+                "health",
+                "other",
+                "services",
+                "teacher"
+            ],
+            "mode": "other",
+            "default": "other"
+        },
+        "Fjob": {
+            "type": "categorical",
+            "allowed_values": [
+                "at_home",
+                "health",
+                "other",
+                "services",
+                "teacher"
+            ],
+            "mode": "other",
+            "default": "other"
+        },
+        "reason": {
+            "type": "categorical",
+            "allowed_values": [
+                "course",
+                "home",
+                "other",
+                "reputation"
+            ],
+            "mode": "course",
+            "default": "course"
+        },
+        "guardian": {
+            "type": "categorical",
+            "allowed_values": [
+                "father",
+                "mother",
+                "other"
+            ],
+            "mode": "mother",
+            "default": "mother"
+        },
+        "schoolsup": {
+            "type": "categorical",
+            "allowed_values": [
+                "no",
+                "yes"
+            ],
+            "mode": "no",
+            "default": "no"
+        },
+        "famsup": {
+            "type": "categorical",
+            "allowed_values": [
+                "no",
+                "yes"
+            ],
+            "mode": "yes",
+            "default": "yes"
+        },
+        "paid": {
+            "type": "categorical",
+            "allowed_values": [
+                "no",
+                "yes"
+            ],
+            "mode": "no",
+            "default": "no"
+        },
+        "activities": {
+            "type": "categorical",
+            "allowed_values": [
+                "no",
+                "yes"
+            ],
+            "mode": "yes",
+            "default": "yes"
+        },
+        "nursery": {
+            "type": "categorical",
+            "allowed_values": [
+                "no",
+                "yes"
+            ],
+            "mode": "yes",
+            "default": "yes"
+        },
+        "higher": {
+            "type": "categorical",
+            "allowed_values": [
+                "no",
+                "yes"
+            ],
+            "mode": "yes",
+            "default": "yes"
+        },
+        "internet": {
+            "type": "categorical",
+            "allowed_values": [
+                "no",
+                "yes"
+            ],
+            "mode": "yes",
+            "default": "yes"
+        },
+        "romantic": {
+            "type": "categorical",
+            "allowed_values": [
+                "no",
+                "yes"
+            ],
+            "mode": "no",
+            "default": "no"
+        }
+    },
+    "evaluation_summary": [
+        {
+            "Model": "Linear Regression",
+            "CV_MAE": 3.5227,
+            "CV_RMSE": 4.607,
+            "CV_R2": -0.0924,
+            "Train_MAE": 2.9462,
+            "Train_RMSE": 3.8651,
+            "Train_R2": 0.2888,
+            "Test_MAE": 3.3953,
+            "Test_RMSE": 4.1957,
+            "Test_R2": 0.1415
+        },
+        {
+            "Model": "Ridge Regression",
+            "CV_MAE": 3.5057,
+            "CV_RMSE": 4.5839,
+            "CV_R2": -0.0801,
+            "Train_MAE": 2.9461,
+            "Train_RMSE": 3.8652,
+            "Train_R2": 0.2887,
+            "Test_MAE": 3.3929,
+            "Test_RMSE": 4.1934,
+            "Test_R2": 0.1424
+        },
+        {
+            "Model": "Random Forest",
+            "CV_MAE": 2.9343,
+            "CV_RMSE": 3.9419,
+            "CV_R2": 0.2036,
+            "Train_MAE": 1.3372,
+            "Train_RMSE": 1.8457,
+            "Train_R2": 0.8378,
+            "Test_MAE": 3.0364,
+            "Test_RMSE": 3.8126,
+            "Test_R2": 0.2911
+        }
+    ],
+    "champion_metrics": {
+        "Test_MAE": 3.0364,
+        "Test_RMSE": 3.8126,
+        "Test_R2": 0.2911,
+        "CV_MAE": 2.9343,
+        "CV_RMSE": 3.9419,
+        "CV_R2": 0.2036
+    }
+}
